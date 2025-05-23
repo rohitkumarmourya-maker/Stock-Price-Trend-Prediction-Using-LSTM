@@ -43,7 +43,7 @@ stock-lstm-project/
 ├── models/ # Saved model weights
 │ └── lstm_best_tuned.weights.h5
 └── Stock-Price-Trend-Prediction-Using-LSTM.ipynb # Colab notebook with full code
-
+---
 ##▶️ Usage
 Open the Colab notebook (notebook.ipynb) in Google Colab.
 
@@ -56,17 +56,18 @@ Model build & training
 Evaluation & visualization
 
 Inspect the saved model weights in models/lstm_best_tuned.weights.h5.
-
+---
 ##📊 Results
 Training & Validation Loss plot
 Actual vs. Predicted closing price plot
 Final metrics displayed in console:
 MSE, RMSE, MAE, R²
-
+---
 ##💡 Notes
 You can swap ticker = "AAPL" with any other valid symbol.
 Adjust n_steps, batch_size, epochs, or network architecture to experiment.
 Streamlit can be used to turn this into an interactive dashboard.
+---
 ##👤 Author
 Rohit Kumar Mourya
 AI & Machine Learning Intern, Elevate Labs

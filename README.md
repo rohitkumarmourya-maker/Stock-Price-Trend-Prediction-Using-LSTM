@@ -23,10 +23,10 @@ A complete end-to-end workflow for forecasting Apple Inc. (AAPL) closing prices 
    - Train/test split (80/20)
 
 4. **Model Building & Training**  
-   - Three-layer LSTM (128→64→32 units) + Dropout(0.2)  
-   - RMSprop optimizer (lr=1e-4)  
+   - Three-layer LSTM (128 → 64 → 32 units) + Dropout(0.2)  
+   - RMSprop optimizer (lr = 1e-4)  
    - Callbacks: EarlyStopping, ReduceLROnPlateau  
-   - Up to 150 epochs, batch_size=8, validation_split=10%
+   - Up to 150 epochs, batch_size = 8, validation_split = 10%
 
 5. **Evaluation & Visualization**  
    - Inverse-scaling predictions  
@@ -35,39 +35,42 @@ A complete end-to-end workflow for forecasting Apple Inc. (AAPL) closing prices 
 
 ---
 
-## 📁 Repository Structure
+## ▶️ Usage
 
-stock-lstm-project/
-├── data/ # Raw CSV downloads
-│ └── AAPL.csv
-├── models/ # Saved model weights
-│ └── lstm_best_tuned.weights.h5
-└── Stock-Price-Trend-Prediction-Using-LSTM.ipynb # Colab notebook with full code
----
-##▶️ Usage
-Open the Colab notebook (notebook.ipynb) in Google Colab.
+1. **Open** the Colab notebook (`Stock-Price-Trend-Prediction-Using-LSTM.ipynb`) in Google Colab.  
+2. **Run** each code cell in order:  
+   - Environment Setup  
+   - Data Acquisition  
+   - EDA (plots & indicators)  
+   - Data Preparation  
+   - Model Build & Training  
+   - Evaluation & Visualization  
+3. **Inspect** the saved model weights in `models/lstm_best_tuned.weights.h5`.
 
-Run each code cell sequentially:
-Environment setup
-Data acquisition
-EDA (plots & indicators)
-Data preparation
-Model build & training
-Evaluation & visualization
+---
 
-Inspect the saved model weights in models/lstm_best_tuned.weights.h5.
+## 📊 Results
+
+- Training & Validation Loss plot  
+- Actual vs. Predicted closing price plot  
+- Final metrics displayed in console:  
+  - MSE  
+  - RMSE  
+  - MAE  
+  - R²  
+
 ---
-##📊 Results
-Training & Validation Loss plot
-Actual vs. Predicted closing price plot
-Final metrics displayed in console:
-MSE, RMSE, MAE, R²
+
+## 💡 Notes
+
+- Swap `ticker = "AAPL"` with any other valid symbol to forecast a different stock.  
+- Adjust `n_steps`, `batch_size`, `epochs`, or the network architecture to experiment.  
+- Use Streamlit to build an interactive dashboard around this model.
+
 ---
-##💡 Notes
-You can swap ticker = "AAPL" with any other valid symbol.
-Adjust n_steps, batch_size, epochs, or network architecture to experiment.
-Streamlit can be used to turn this into an interactive dashboard.
----
-##👤 Author
-Rohit Kumar Mourya
-AI & Machine Learning Intern, Elevate Labs
+
+## 👤 Author
+
+**Rohit Kumar Mourya**  
+AI & Machine Learning Intern, Elevate Labs  
+
